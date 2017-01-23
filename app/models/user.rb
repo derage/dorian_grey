@@ -1,4 +1,4 @@
-class User < ApplicationRecord
+class User < ActiveRecord::Base
   before_create :generate_authentication_token!
   validates :auth_token, uniqueness: true
   validates :email, uniqueness: true
